@@ -36,19 +36,19 @@ export default function About() {
     <>
       <Hero
         compact
-        eyebrow="About Heritage Homecoming"
+        eyebrow="About Heritage Philippines"
         title="We believe travel can do more than move people."
-        text="We created Heritage Homecoming for travelers who want more than a beautiful itinerary. The most meaningful journeys reconnect identity, memory, family, and place."
+        text="We created Heritage Philippines for travelers who want more than a beautiful itinerary. The most meaningful journeys reconnect identity, memory, family, and place."
         image={image("about-trust-brand/a-group-photo.jpg")}
         primary={{ label: "Meet The Journey", to: "/story" }}
         secondary={{ label: "Plan Your Return", to: "/plan" }}
       />
 
       <FadeInSection>
-        <Section eyebrow="Mission" title="Why Heritage Homecoming exists.">
+        <Section eyebrow="Mission" title="Why Heritage Philippines exists.">
           <article className="content-panel statement-panel">
             <p>
-              Heritage Homecoming is for travelers who want a return shaped by listening, not speed. It treats travel as a way to understand family memory, living culture, and the emotional geography of belonging.
+              Heritage Philippines is for travelers who want a return shaped by listening, not speed. It treats travel as a way to understand family memory, living culture, and the emotional geography of belonging.
             </p>
           </article>
         </Section>

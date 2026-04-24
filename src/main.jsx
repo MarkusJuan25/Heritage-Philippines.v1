@@ -2,6 +2,7 @@ import React, { useEffect } from "react";
 import ReactDOM from "react-dom/client";
 import Lenis from "lenis";
 import App from "./App.jsx";
+import { AuthProvider } from "./context/AuthContext.jsx";
 import "./styles/global.css";
 
 function Root() {
@@ -32,7 +33,11 @@ function Root() {
     };
   }, []);
 
-  return <App />;
+  return (
+    <AuthProvider>
+      <App />
+    </AuthProvider>
+  );
 }
 
 ReactDOM.createRoot(document.getElementById("root")).render(<Root />);

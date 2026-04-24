@@ -19,7 +19,7 @@ export default function Gallery() {
         compact
         eyebrow="Visual Impact"
         title="Moments that feel like memory returning."
-        text="Browse the textures of the Heritage Homecoming experience, from landscapes and weaving to shared meals and warm arrivals."
+        text="Browse the textures of the Heritage Philippines experience, from landscapes and weaving to shared meals and warm arrivals."
         image={image("gallery-visual-impact/palmtrees.jpg")}
         primary={{ label: "Plan Journey", to: "/plan" }}
         secondary={{ label: "View Stories", to: "/stories" }}

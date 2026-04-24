@@ -2,6 +2,8 @@ import { BrowserRouter, Route, Routes, useLocation } from "react-router-dom";
 import { useEffect, useState } from "react";
 import Navbar from "./components/Navbar.jsx";
 import Footer from "./components/Footer.jsx";
+import LoginModal from "./components/LoginModal.jsx";
+import ProtectedRoute from "./components/ProtectedRoute.jsx";
 import useCinematicScroll from "./hooks/useCinematicScroll.js";
 import Home from "./pages/Home.jsx";
 import Story from "./pages/Story.jsx";
@@ -14,6 +16,10 @@ import Stories from "./pages/Stories.jsx";
 import Gallery from "./pages/Gallery.jsx";
 import About from "./pages/About.jsx";
 import Plan from "./pages/Plan.jsx";
+import Dashboard from "./pages/Dashboard.jsx";
+import MemberHome from "./pages/MemberHome.jsx";
+import FAQ from "./pages/FAQ.jsx";
+import Login from "./pages/Login.jsx";
 
 function ScrollToTop() {
   const { pathname } = useLocation();
@@ -74,6 +80,7 @@ function AppShell() {
       <ScrollToTop />
       <ScrollProgress />
       <Navbar />
+      <LoginModal />
 
       <div className="page-container">
         <Routes>
@@ -88,6 +95,17 @@ function AppShell() {
           <Route path="/gallery" element={<PageWrapper><Gallery /></PageWrapper>} />
           <Route path="/about" element={<PageWrapper><About /></PageWrapper>} />
           <Route path="/plan" element={<PageWrapper><Plan /></PageWrapper>} />
+          <Route path="/member" element={<PageWrapper><MemberHome /></PageWrapper>} />
+          <Route path="/faq" element={<FAQ />} />
+          <Route
+            path="/dashboard"
+            element={
+              <ProtectedRoute>
+                <PageWrapper><Dashboard /></PageWrapper>
+              </ProtectedRoute>
+            }
+          />
+          <Route path="/login" element={<PageWrapper><Login /></PageWrapper>} />
           <Route path="*" element={<PageWrapper><NotFound /></PageWrapper>} />
         </Routes>
       </div>

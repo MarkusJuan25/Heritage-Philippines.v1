@@ -10,6 +10,8 @@ export const navLinks = [
   { label: "Gallery", to: "/gallery" },
   { label: "About", to: "/about" },
   { label: "Plan", to: "/plan" },
+  { label: "Dashboard", to: "/dashboard" },
+  { label: "Login", to: "/login" },
 ];
 
 export const stageActs = [

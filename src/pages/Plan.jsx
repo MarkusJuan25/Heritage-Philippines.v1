@@ -1,6 +1,7 @@
 import { useState } from "react";
 import Hero from "../components/Hero.jsx";
 import Section from "../components/Section.jsx";
+import { useAuth } from "../context/AuthContext.jsx";
 import { image } from "../data/heritage.js";
 
 const initialForm = {
@@ -15,6 +16,7 @@ const initialForm = {
 };
 
 export default function Plan() {
+  const { token } = useAuth();
   const [form, setForm] = useState(initialForm);
   const [status, setStatus] = useState({ type: "idle", message: "" });
 
@@ -29,7 +31,6 @@ export default function Plan() {
 
     try {
       const apiBase = import.meta.env.VITE_API_URL || "http://localhost:5000";
-      const token = localStorage.getItem("heritageToken") || localStorage.getItem("token");
       const headers = { "Content-Type": "application/json" };
 
       if (token) {
@@ -62,6 +63,7 @@ export default function Plan() {
           type: "warning",
           message: "Sign in first so your journey request can be saved securely to your account.",
         });
+        window.dispatchEvent(new Event("openLogin"));
         return;
       }
 

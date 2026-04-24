@@ -43,7 +43,7 @@ export default function Story() {
         compact
         eyebrow="The Narrative Arc"
         title="Your story did not begin here. But it can continue here."
-        text="Heritage Homecoming is a return shaped by memory, ancestry, movement, and belonging - not as tourism alone, but as a way of finding your place in a living story."
+        text="Heritage Philippines is a return shaped by memory, ancestry, movement, and belonging - not as tourism alone, but as a way of finding your place in a living story."
         image={image("heritage-fb-banner.jpg")}
         primary={{ label: "Plan Your Journey", to: "/plan" }}
         secondary={{ label: "View Experiences", to: "/experiences" }}
@@ -69,7 +69,7 @@ export default function Story() {
       <ParallaxSection
         eyebrow="Why It Exists"
         title="This is not only a trip. It is a return."
-        text="Heritage Homecoming exists to transform travel into reconnection. The goal is not simply to see destinations, but to encounter memory through landscape, tradition, food, family, and the quiet emotional moments that make identity feel real again."
+        text="Heritage Philippines exists to transform travel into reconnection. The goal is not simply to see destinations, but to encounter memory through landscape, tradition, food, family, and the quiet emotional moments that make identity feel real again."
         image={image("home-hero-story-preview/misty-mountain.jpg")}
       />
 
